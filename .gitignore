@@ -16,9 +16,9 @@
 /frontend/project
 /frontend/classpath
 /frontend/c9/
-/frontend/*.launch
+/frontend/*launch
 /frontend/settings/
-/frontend/*.sublime-workspace
+/frontend/*sublime-workspace
 
 # Visual Studio Code
 /frontend/.vscode/*
