@@ -47,20 +47,24 @@ $my-cyan-palette: (
 );
 
 
-$media-site-primary: mat.define-palette($my-cyan-palette);
-$media-site-accent: mat.define-palette(mat.$teal-palette, A200, A100, A400);
+$media-site-primary: mat.define-palette($my-cyan-palette, 300, 100, 700);
+$media-site-accent: mat.define-palette(mat.$teal-palette, A400, A100, A700);
 
 // The warn palette is optional (defaults to red).
 $media-site-warn: mat.define-palette(mat.$red-palette);
 
+$my-typography: mat.define-typography-config();
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $media-site-theme: mat.define-light-theme((color: (primary: $media-site-primary,
         accent: $media-site-accent,
         warn: $media-site-warn,
-      )));
+      ),
+      typography: $my-typography,
+    ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($media-site-theme);
+@include mat.all-legacy-component-themes($media-site-theme);

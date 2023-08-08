@@ -7,5 +7,10 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button {
+    color: white !important;
 }
