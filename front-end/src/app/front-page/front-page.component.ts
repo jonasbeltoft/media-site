@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class FrontPageComponent {
 
+  prevViewed: string[] = ["movie1", "movie2", "movie3"]
+
 }

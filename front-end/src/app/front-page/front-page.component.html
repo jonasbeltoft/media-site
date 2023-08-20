@@ -1,3 +1,20 @@
 <div class="front-page-container">
+	<div class="title">
+		<h1 class="title-big">Some title</h1>
+		<h3 class="sub-big">Series name</h3>
+	</div>
+	<div class="holder">
+		<img class="recently-watched" src="../../assets/dev_assets/dev-poster.png" alt="Most recently watched video">
+		<div class="other-viewed">
+			<div class="prev-viewed-card" *ngFor="let elem of prevViewed">
+				<div class="small-inside">
 
+					<img class="recently-watched-small" src="../../assets/dev_assets/dev-poster.png"
+						alt="Most recently watched video">
+					<div class="title-small">{{ elem }}</div>
+					<div class="sub-small">{{ elem }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
