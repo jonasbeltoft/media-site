@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --background-color: #00000008;
+}
 
 html,
 body {
@@ -14,3 +17,7 @@ body {
 .mat-mdc-unelevated-button {
     color: white !important;
 }
+
+/* app-root:last-child {
+    height: calc(100% - 70px);
+} */

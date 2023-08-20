@@ -1,0 +1,55 @@
+.top-bar-container {
+    background-image: linear-gradient(#00000020, #00000010, #00000008, transparent);
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-btn {
+    height: 80%;
+    margin-left: 15px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.home-icon {
+    height: 40px;
+}
+
+::ng-deep .home-btn.mat-mdc-extended-fab .mdc-fab__ripple {
+    border-radius: 15px !important;
+}
+
+.search-form {
+    min-width: 250px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.search-full-width {
+    width: 100%;
+}
+
+::ng-deep .search-form .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+}
+
+.right-side {
+    display: flex;
+    margin-right: 15px;
+    height: 80%;
+    gap: 15px;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent;
+}
+
+.list-btn mat-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+}

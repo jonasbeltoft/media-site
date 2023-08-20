@@ -7,19 +7,35 @@ import { MatButtonModule } from '@angular/material/button';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { ViewerComponent } from './viewer/viewer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatIconModule } from '@angular/material/icon';
+import { ListPageComponent } from './list-page/list-page.component';
+import { FormsModule } from '@angular/forms';
+import { ListElemComponent } from './list-page/list-elem/list-elem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FrontPageComponent,
     ViewerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TopBarComponent,
+    ListPageComponent,
+    ListElemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

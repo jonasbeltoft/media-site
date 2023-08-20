@@ -10,11 +10,12 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewerComponent {
 
   videoId: string
+  videoName: string
 
   constructor(route: ActivatedRoute, private titleService: Title) {
     route.params.subscribe((params) => {
       this.videoId = params["id"];
     });
-    this.titleService.setTitle('Video: ');
+    this.titleService.setTitle(this.videoName ? 'Video: ' + this.videoName : 'Stream');
   }
 }

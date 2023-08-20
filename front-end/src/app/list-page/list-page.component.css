@@ -1,0 +1,9 @@
+.list-page-container {
+    background-color: var(--background-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
