@@ -22,6 +22,6 @@ export class ViewerComponent {
     this.videoName = "Video name"
     this.seriesName = "Series name"
 
-    this.titleService.setTitle(this.videoName ? 'Video: ' + this.videoName : 'Stream');
+    this.titleService.setTitle(this.videoName ? this.videoName : 'Streaming...');
   }
 }
