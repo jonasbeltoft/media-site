@@ -14,6 +14,7 @@ export class TopBarComponent {
   constructor(private router: Router, private searchService: SearchService) { }
 
   search(val: any) {
+    if (val.value === "" || val.value === undefined) return
     if (this.router.url.includes('/list')) {
       this.searchService.search(val.value)
     } else {

@@ -17,6 +17,7 @@ export class ListPageComponent implements OnInit {
       this.videos = files
       console.log(this.videos);
     })
-    this.searchService.search(history.state['searchString'] ? history.state['searchString'] : '')
+
+    if (history.state['searchString']) this.searchService.search(history.state['searchString'])
   }
 }
