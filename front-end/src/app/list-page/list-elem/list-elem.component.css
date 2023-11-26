@@ -20,6 +20,8 @@ mat-card {
 	max-width: 400px;
 	min-height: 300px;
 	max-height: 400px;
+
+	cursor: pointer;
 }
 
 .mat-mdc-card-header {

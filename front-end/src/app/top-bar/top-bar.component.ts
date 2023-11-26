@@ -9,20 +9,11 @@ import { SearchService } from '../search.service';
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']
 })
-export class TopBarComponent implements AfterViewInit {
+export class TopBarComponent {
 
   @ViewChild('topBar') top_bar: ElementRef;
 
-  constructor(private router: Router, private searchService: SearchService, private renderer: Renderer2) { }
-
-  ngAfterViewInit(): void {
-    // if (window.scrollY == 0) {
-    //   //user is at the top of the page
-    //   this.renderer.setStyle(this.top_bar.nativeElement, 'background-image', 'linear-gradient(#00000020, #00000010, #00000006, transparent)')
-    // } else {
-    //   this.renderer.setStyle(this.top_bar.nativeElement, 'background-image', 'linear-gradient(#00000020, #00000010, #00000006, transparent)')
-    // }
-  }
+  constructor(private router: Router, private searchService: SearchService) { }
 
   search(val: any) {
     if (val?.value === "" || val?.value === undefined) return

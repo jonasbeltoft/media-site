@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card (click)="goToVideo(elem?.id)">
 	<mat-card-header>
 		<mat-card-title>{{ elem?.title }}</mat-card-title>
 		<mat-card-subtitle *ngIf="elem?.show">{{ elem?.show }}</mat-card-subtitle>
