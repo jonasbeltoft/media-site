@@ -31,7 +31,7 @@ export class TopBarComponent {
 
   goToList() {
     if (this.router.url.includes('/list')) {
-      this.searchService.getRecent()
+      this.searchService.getRecent(undefined)
     } else {
       this.router.navigate(['/list'], { state: { searchString: null } })
     }

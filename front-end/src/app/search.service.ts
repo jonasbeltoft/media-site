@@ -16,7 +16,7 @@ export class SearchService {
     { id: "4", title: "Trouble in paradise", episode: "498", series: "Naruto Shippuden", shortDesc: "A short description of this movie or episode. It might be a little lenghty, but not too long.", poster: "assets/dev_assets/naruto-shippuden-498-cover.png" }
   ]
   constructor() {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 40; i++) {
       let vid = structuredClone(this.premades[i % 4])
       vid.id = i.toString()
       this.videos.push(vid);
@@ -33,11 +33,13 @@ export class SearchService {
     this.searchEvent.emit(result)
   }
 
-  async getRecent() {
+  async getRecent(count: number) {
     // Do the fetch
-
+    let result = this.videos.slice(0, count)
     // Emit the result
-    this.searchEvent.emit(this.videos)
+    console.log(result);
+
+    this.searchEvent.emit(result)
   }
 
   async getById(id: string) {

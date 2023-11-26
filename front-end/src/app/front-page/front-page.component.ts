@@ -15,9 +15,9 @@ export class FrontPageComponent implements OnInit {
 
   ngOnInit() {
     this.searchService.searchEvent.subscribe((files) => {
-      this.prevViewed = files.slice(0, 4)
+      this.prevViewed = files
     })
-    this.searchService.getRecent()
+    this.searchService.getRecent(4)
   }
 
   goToVideo(id: string) {

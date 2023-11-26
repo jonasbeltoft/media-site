@@ -15,9 +15,8 @@ export class ListPageComponent implements OnInit {
   ngOnInit(): void {
     this.searchService.searchEvent.subscribe((files) => {
       this.videos = files
-      console.log(this.videos);
     })
 
-    history.state['searchString'] ? this.searchService.search(history.state['searchString']) : this.searchService.getRecent()
+    history.state['searchString'] ? this.searchService.search(history.state['searchString']) : this.searchService.getRecent(20)
   }
 }
