@@ -8,7 +8,7 @@
 		<button mat-fab color="primary" (click)="goToPrevious()">
 			<mat-icon class="back">skip_previous</mat-icon>
 		</button>
-		<video width="1280px" height="720px" autoplay controls preload="none" poster="{{ video?.poster }}">
+		<video width="1280px" height="720px" autoplay controls preload="none" poster="{{ video?.poster }}" #videoplayer>
 			<source src="../../assets/dev_assets/I_Truly_Am_Becoming_A_One_Man_Army.mp4" type='video/mp4' />
 		</video>
 		<button mat-fab color="primary" (click)="goToNext()">
