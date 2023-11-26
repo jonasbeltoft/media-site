@@ -27,7 +27,7 @@ export class SearchService {
     console.log("Searched for: " + input);
 
     // Do the fetch
-    let result = this.videos.filter(val => val.title.toLocaleLowerCase().includes(input.toLocaleLowerCase()))
+    let result = this.videos.filter(val => val.title.toLocaleLowerCase().includes(input.toLocaleLowerCase()) || val.series?.toLocaleLowerCase().includes(input.toLocaleLowerCase()))
 
     // Emit the result
     this.searchEvent.emit(result)

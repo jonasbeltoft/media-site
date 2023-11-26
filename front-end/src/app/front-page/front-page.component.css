@@ -109,3 +109,33 @@
     max-height: 100%;
     gap: 15px;
 }
+
+@media only screen and (max-width: 550px) and (orientation: portrait) {
+    .front-page-container {
+        display: flex !important;
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    .recently-watched-img {
+        margin-left: 15px;
+        margin-right: 15px;
+        max-width: calc(100% - 30px);
+    }
+
+    .title {
+        align-self: unset;
+        padding-left: 15px;
+    }
+
+    .small-cards {
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        max-height: none;
+    }
+
+    .prev-viewed-card {
+        min-height: 270px;
+    }
+}
