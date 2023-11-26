@@ -1,31 +1,30 @@
 <div class="front-page-container">
 	<div class="title">
-		<h1 class="title-big">Some title</h1>
-		<h3 class="sub-big">Series name</h3>
+		<h1 class="title-big">{{ prevViewed[0].title }}</h1>
+		<h3 class="sub-big">{{ prevViewed[0].shortDesc }}</h3>
 	</div>
-	<img class="recently-watched-img" src="../../assets/dev_assets/dev-poster.png" alt="Most recently watched video">
+	<img class="recently-watched-img" src="{{ prevViewed[0].poster }}" alt="Most recently watched video">
 	<div class="small-cards">
 
 		<div class="prev-viewed-card small-prev-one">
-			<img class="recently-watched-small-img" src="../../assets/dev_assets/dev-poster.png"
-				alt="Most recently watched video">
-			<div class="title-small">{{ prevViewed[0] }}</div>
-			<div class="sub-small">{{ prevViewed[0] }}</div>
-
+			<img class="recently-watched-small-img" src="{{ prevViewed[1].poster }}" alt="Most recently watched video">
+			<div class="title-small">{{ prevViewed[1].title }}</div>
+			<div class="sub-small">{{ prevViewed[1].shortDesc }}</div>
 		</div>
 		<div class="prev-viewed-card small-prev-two">
-			<img class="recently-watched-small-img" src="../../assets/dev_assets/dev-poster.png"
-				alt="Most recently watched video">
-			<div class="title-small">{{ prevViewed[1] }}</div>
-			<div class="sub-small">{{ prevViewed[1] }}</div>
-
+			<img class="recently-watched-small-img" src="{{ prevViewed[2].poster }}" alt="Most recently watched video">
+			<div class="title-small">{{ prevViewed[2].title }}</div>
+			<div class="sub-small">{{ prevViewed[2].shortDesc }}</div>
 		</div>
 		<div class="prev-viewed-card small-prev-three">
-			<img class="recently-watched-small-img" src="../../assets/dev_assets/dev-poster.png"
-				alt="Most recently watched video">
-			<div class="title-small">{{ prevViewed[2] }}</div>
-			<div class="sub-small">{{ prevViewed[2] }}</div>
-
+			<img class="recently-watched-small-img" src="{{ prevViewed[3].poster }}" alt="Most recently watched video">
+			<div class="title-small">{{ prevViewed[3].title }}</div>
+			<div class="sub-small">{{ prevViewed[3].shortDesc }}</div>
+		</div>
+		<div class="prev-viewed-card small-prev-three">
+			<img class="recently-watched-small-img" src="{{ prevViewed[3].poster }}" alt="Most recently watched video">
+			<div class="title-small">{{ prevViewed[3].title }}</div>
+			<div class="sub-small">{{ prevViewed[3].shortDesc }}</div>
 		</div>
 	</div>
 </div>
