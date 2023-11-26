@@ -8,7 +8,7 @@ import { SearchService } from '../search.service';
 })
 export class ListPageComponent implements OnInit {
 
-  videos: string[] = []
+  videos: { title: string, shortDesc: string, poster: string }[] = []
 
   constructor(private searchService: SearchService) { }
 
@@ -18,6 +18,6 @@ export class ListPageComponent implements OnInit {
       console.log(this.videos);
     })
 
-    if (history.state['searchString']) this.searchService.search(history.state['searchString'])
+    history.state['searchString'] ? this.searchService.search(history.state['searchString']) : this.searchService.getRecent()
   }
 }

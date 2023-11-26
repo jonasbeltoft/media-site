@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ListPageComponent } from './list-page/list-page.component';
 import { FormsModule } from '@angular/forms';
 import { ListElemComponent } from './list-page/list-elem/list-elem.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ListElemComponent } from './list-page/list-elem/list-elem.component';
     MatInputModule,
     MatTooltipModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

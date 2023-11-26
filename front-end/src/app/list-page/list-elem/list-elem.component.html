@@ -1,1 +1,10 @@
-<h3>{{ searchElem.toString() }}</h3>
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>{{ elem?.title }}</mat-card-title>
+		<mat-card-subtitle *ngIf="elem?.show">{{ elem?.show }}</mat-card-subtitle>
+	</mat-card-header>
+	<img mat-card-image class="small-img" src="{{ elem?.poster }}">
+	<mat-card-content>
+		<div class="description">{{ elem?.shortDesc }}</div>
+	</mat-card-content>
+</mat-card>

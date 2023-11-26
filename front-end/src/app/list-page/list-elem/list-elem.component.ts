@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ListElemComponent {
 
   @Input()
-  searchElem: any
+  elem: any
 
 }
