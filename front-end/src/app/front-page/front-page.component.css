@@ -62,6 +62,8 @@ img {
     aspect-ratio: 16/9;
     width: auto;
     max-width: 100%;
+
+    background: url('/assets/icon-img.png') no-repeat;
 }
 
 .title-small {
