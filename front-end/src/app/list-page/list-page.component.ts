@@ -8,7 +8,7 @@ import { SearchService } from '../search.service';
 })
 export class ListPageComponent implements OnInit {
 
-  videos: { title: string, shortDesc: string, poster: string }[] = []
+  videos: { id: string, title: string, episode?: string, series?: string, shortDesc: string, poster: string }[] = []
 
   constructor(private searchService: SearchService) { }
 

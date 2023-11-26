@@ -9,9 +9,9 @@ import { SearchService } from '../search.service';
 })
 export class FrontPageComponent implements OnInit {
 
-  prevViewed: { id: string, title: string, shortDesc: string, poster: string }[] = []
+  prevViewed: { id: string, title: string, episode?: string, series?: string, shortDesc: string, poster: string }[] = []
 
-  constructor(private router: Router, private searchService: SearchService,) { }
+  constructor(private router: Router, private searchService: SearchService) { }
 
   ngOnInit() {
     this.searchService.searchEvent.subscribe((files) => {

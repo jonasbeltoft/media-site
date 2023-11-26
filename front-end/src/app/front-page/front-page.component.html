@@ -1,7 +1,8 @@
 <div class="front-page-container">
 	<div class="title">
 		<h1 class="title-big">{{ prevViewed[0].title }}</h1>
-		<h3 class="sub-big">{{ prevViewed[0].shortDesc }}</h3>
+		<h3 class="sub-big">{{ prevViewed[0].series ? prevViewed[0].series + ": ep. " + prevViewed[0].episode :
+			prevViewed[0].shortDesc }}</h3>
 	</div>
 	<img class="recently-watched-img" (click)="goToVideo(prevViewed[0].id)" src="{{ prevViewed[0].poster }}"
 		alt="Most recently watched video">
@@ -11,19 +12,22 @@
 			<img class="recently-watched-small-img" src="{{ prevViewed[1].poster }}"
 				alt="Second most recently watched video">
 			<div class="title-small">{{ prevViewed[1].title }}</div>
-			<div class="sub-small">{{ prevViewed[1].shortDesc }}</div>
+			<div class="sub-small">{{ prevViewed[1].series ? prevViewed[1].series + ": ep. " + prevViewed[1].episode :
+				prevViewed[1].shortDesc }}</div>
 		</div>
 		<div class="prev-viewed-card small-prev-two" (click)="goToVideo(prevViewed[2].id)">
 			<img class="recently-watched-small-img" src="{{ prevViewed[2].poster }}"
 				alt="Third most recently watched video">
 			<div class="title-small">{{ prevViewed[2].title }}</div>
-			<div class="sub-small">{{ prevViewed[2].shortDesc }}</div>
+			<div class="sub-small">{{ prevViewed[2].series ? prevViewed[2].series + ": ep. " + prevViewed[2].episode :
+				prevViewed[2].shortDesc }}</div>
 		</div>
 		<div class="prev-viewed-card small-prev-three" (click)="goToVideo(prevViewed[3].id)">
 			<img class="recently-watched-small-img" src="{{ prevViewed[3].poster }}"
 				alt="Fourth most recently watched video">
 			<div class="title-small">{{ prevViewed[3].title }}</div>
-			<div class="sub-small">{{ prevViewed[3].shortDesc }}</div>
+			<div class="sub-small">{{ prevViewed[3].series ? prevViewed[3].series + ": ep. " + prevViewed[3].episode :
+				prevViewed[3].shortDesc }}</div>
 		</div>
 	</div>
 </div>

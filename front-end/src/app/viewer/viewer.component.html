@@ -1,14 +1,17 @@
 <div class="viewer-page-container">
-	<h1 class="title-big">{{videoName}}</h1>
-	<h3 class="sub-big">{{seriesName}}</h3>
-	<video width="1280px" height="720px" controls preload="none" poster="../../assets/dev_assets/dev-poster.png">
-		<source src="../../assets/dev_assets/I_Truly_Am_Becoming_A_One_Man_Army.mp4" type='video/mp4' />
-	</video>
-	<div class="action-bar">
-		<button mat-fab color="primary">
+	<div class="title">
+		<h1 class="title-big">{{ video?.title }}</h1>
+		<h3 class="sub-big">{{ video?.series ? video?.series + ": ep. " + video?.episode :
+			'' }}</h3>
+	</div>
+	<div class="video-wrapper">
+		<button mat-fab color="primary" (click)="goToPrevious()">
 			<mat-icon class="back">skip_previous</mat-icon>
 		</button>
-		<button mat-fab color="primary">
+		<video width="1280px" height="720px" autoplay controls preload="none" poster="{{ video?.poster }}">
+			<source src="../../assets/dev_assets/I_Truly_Am_Becoming_A_One_Man_Army.mp4" type='video/mp4' />
+		</video>
+		<button mat-fab color="primary" (click)="goToNext()">
 			<mat-icon class="next">skip_next</mat-icon>
 		</button>
 	</div>
