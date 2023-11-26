@@ -42,6 +42,7 @@
     margin-right: 15px;
     height: 80%;
     gap: 15px;
+    align-items: center;
 }
 
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
