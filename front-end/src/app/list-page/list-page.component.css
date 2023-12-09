@@ -1,7 +1,7 @@
 .list-page-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: auto;
+    grid-auto-rows: min-content;
     gap: 20px;
 
     padding-top: 85px;

@@ -1,5 +1,6 @@
 <div class="list-page-container">
-	<app-movie-card class="elem" [hasDescription]="!!elem?.shortDesc" *ngFor="let elem of videos" [elem]="elem">
+	<app-movie-card class="elem" [ngStyle]="!!elem?.shortDesc ? {} : {'min-height' : '300px'}"
+		[hasDescription]="!!elem?.shortDesc" *ngFor="let elem of videos" [elem]="elem">
 
 	</app-movie-card>
 </div>

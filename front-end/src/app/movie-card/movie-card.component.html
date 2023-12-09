@@ -4,7 +4,8 @@
 		<mat-card-title>{{ elem?.title }}</mat-card-title>
 		<mat-card-subtitle>{{ elem?.series ? elem?.series : 'Movie' }}</mat-card-subtitle>
 	</mat-card-header>
-	<div class="img-container">
+	<div class="img-container"
+		[ngStyle]="hasDescription ? {'flex' : 'unset', 'max-height' : '50%', 'min-height' : '50%'} : null">
 		<img mat-card-image class="small-img" src="{{ elem?.poster }}">
 		<div *ngIf="elem?.episode" class="top-left-wrapper">
 			<p class="top-left-text">{{ elem?.episode }}</p>

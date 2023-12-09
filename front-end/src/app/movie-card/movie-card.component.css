@@ -42,6 +42,7 @@ mat-card {
 	max-width: 400px;
 	min-height: 300px;
 	max-height: 400px;
+	height: 100%;
 
 	cursor: pointer;
 	overflow: hidden;
@@ -63,7 +64,10 @@ mat-card-subtitle {
 mat-card-content {
 	padding-top: 5px;
 	margin-bottom: 5px;
-	height: min(4em, fit-content);
+	max-height: 6em;
+
+	/* flex: 1;*/
+
 	overflow-y: auto;
 }
 
