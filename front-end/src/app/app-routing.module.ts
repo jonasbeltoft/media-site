@@ -6,14 +6,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ListPageComponent } from './list-page/list-page.component';
 
 const routes: Routes = [
-  { path: 'video-viewer/:id', component: ViewerComponent },
-  { path: 'list', component: ListPageComponent },
-  { path: '', component: FrontPageComponent },
-  { path: "**", component: PageNotFoundComponent }
+	{ path: 'video-viewer/:id', component: ViewerComponent },
+	{ path: 'list', component: ListPageComponent },
+	{ path: '', component: FrontPageComponent },
+	{ path: "**", component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }

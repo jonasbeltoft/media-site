@@ -14,32 +14,32 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { ListPageComponent } from './list-page/list-page.component';
 import { FormsModule } from '@angular/forms';
-import { ListElemComponent } from './list-page/list-elem/list-elem.component';
 import { MatCardModule } from '@angular/material/card';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FrontPageComponent,
-    ViewerComponent,
-    PageNotFoundComponent,
-    TopBarComponent,
-    ListPageComponent,
-    ListElemComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTooltipModule,
-    MatIconModule,
-    FormsModule,
-    MatCardModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		FrontPageComponent,
+		ViewerComponent,
+		PageNotFoundComponent,
+		TopBarComponent,
+		ListPageComponent,
+		MovieCardComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatButtonModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatTooltipModule,
+		MatIconModule,
+		FormsModule,
+		MatCardModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
