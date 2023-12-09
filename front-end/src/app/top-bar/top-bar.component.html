@@ -1,22 +1,22 @@
 <div class="top-bar-container" #topBar>
 
-    <button class="home-btn" (click)="goToHome()" disableRipple="true" color="primary" mat-fab extended
-        matTooltip="Home">
-        <img class="home-icon" src="../../assets/film-slate-partly-colored.png" alt="Home">
-    </button>
-    <a style="display: none;" href="https://www.flaticon.com/free-icons/film" title="film icons">Film icons created by
-        bukeicon - Flaticon</a>
+	<button class="home-btn" (click)="goToHome()" disableRipple="true" color="primary" mat-fab extended
+		matTooltip="Home">
+		<img class="home-icon" src="../../assets/film-slate-partly-colored.png" alt="Home">
+	</button>
+	<a style="display: none;" href="https://www.flaticon.com/free-icons/film" title="film icons">Film icons created by
+		bukeicon - Flaticon</a>
 
-    <div class="right-side">
-        <form class="search-form" (keydown.enter)="search(text)">
-            <mat-form-field class="search-full-width">
-                <mat-label>Search...</mat-label>
-                <input type="text" matInput #text>
-            </mat-form-field>
-        </form>
-        <button class="list-btn" color="primary" mat-fab matTooltip="List view" (click)="goToList()">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </div>
+	<div class="right-side">
+		<form class="search-form" (keydown.enter)="search(text)">
+			<mat-form-field class="search-full-width">
+				<mat-label>Search...</mat-label>
+				<input type="text" matInput #text>
+			</mat-form-field>
+		</form>
+		<button class="list-btn" color="primary" mat-fab matTooltip="List view" (click)="goToList()">
+			<mat-icon>menu</mat-icon>
+		</button>
+	</div>
 
 </div>
