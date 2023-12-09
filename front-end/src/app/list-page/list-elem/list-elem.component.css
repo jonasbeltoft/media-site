@@ -1,17 +1,36 @@
-.description {
-	display: -webkit-box;
-	-webkit-line-clamp: 6;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+.img-container {
+	max-width: 100%;
+	aspect-ratio: 16/9;
+	max-height: min-content;
+	position: relative;
+	text-align: center;
+	color: white;
 }
 
 .small-img {
 	object-fit: cover;
 	aspect-ratio: 16/9;
-	width: auto;
 	max-width: 100%;
 
 	background: url('/assets/icon-img.png') no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.top-left-text {
+	margin: 0;
+
+}
+
+.top-left-wrapper {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+
+	background-color: var(--primary-blue);
+	padding: 4px 6px;
+	border-radius: 5px;
+
 }
 
 mat-card {
@@ -29,14 +48,37 @@ mat-card {
 	padding-bottom: 10px;
 }
 
-mat-card-title {
+mat-card-title,
+mat-card-subtitle {
 	display: -webkit-box;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 	overflow: hidden !important;
 }
 
 mat-card-content {
 	padding-top: 5px;
-	overflow-y: hidden;
+	margin-bottom: 5px;
+	height: min(4em, fit-content);
+	overflow-y: auto;
+}
+
+/* width */
+mat-card-content::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+mat-card-content::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+mat-card-content::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+mat-card-content::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }

@@ -1,10 +1,15 @@
 <mat-card (click)="goToVideo(elem?.id)">
 	<mat-card-header>
 		<mat-card-title>{{ elem?.title }}</mat-card-title>
-		<mat-card-subtitle *ngIf="elem?.series">{{ elem?.series + ": ep. " + elem.episode }}</mat-card-subtitle>
+		<mat-card-subtitle>{{ elem?.series ? elem?.series : 'Movie' }}</mat-card-subtitle>
 	</mat-card-header>
-	<img mat-card-image class="small-img" src="{{ elem?.poster }}">
+	<div class="img-container">
+		<img mat-card-image class="small-img" src="{{ elem?.poster }}">
+		<div *ngIf="elem?.episode" class="top-left-wrapper">
+			<p class="top-left-text">{{ elem?.episode }}</p>
+		</div>
+	</div>
 	<mat-card-content>
-		<div class="description">{{ elem?.shortDesc }}</div>
+		<div>{{ elem?.shortDesc }}</div>
 	</mat-card-content>
 </mat-card>
