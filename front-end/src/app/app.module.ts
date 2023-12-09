@@ -39,7 +39,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 		FormsModule,
 		MatCardModule
 	],
-	providers: [],
+	providers: [TopBarComponent],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

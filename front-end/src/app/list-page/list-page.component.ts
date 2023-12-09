@@ -1,22 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
+import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'app-list-page',
-    templateUrl: './list-page.component.html',
-    styleUrls: ['./list-page.component.css']
+	selector: 'app-list-page',
+	templateUrl: './list-page.component.html',
+	styleUrls: ['./list-page.component.css']
 })
-export class ListPageComponent implements OnInit {
+export class ListPageComponent implements OnInit, OnDestroy {
 
-    videos: { id: string, title: string, episode?: string, series?: string, shortDesc: string, poster: string }[] = []
+	videos: { id: string, title: string, episode?: string, series?: string, shortDesc: string, poster: string }[] = []
 
-    constructor(private searchService: SearchService) { }
+	public noResults = false
+	searchString = ""
+	searchSubscribtion: Subscription
 
-    ngOnInit(): void {
-        this.searchService.searchEvent.subscribe((files) => {
-            this.videos = files
-        })
+	constructor(private searchService: SearchService) { }
 
-        history.state['searchString'] ? this.searchService.search(history.state['searchString']) : this.searchService.getRecent(20)
-    }
+	ngOnInit(): void {
+		this.searchSubscribtion = this.searchService.searchEvent.subscribe((files) => {
+			if (files?.length > 0) {
+				this.noResults = false
+			} else {
+				this.noResults = true
+			}
+			this.videos = files
+
+			this.searchString = this.searchService.lastSearched
+			console.log("fetched files with " + this.searchString);
+
+		})
+
+		history.state['searchString'] ? this.searchService.search(history.state['searchString']) : this.searchService.getRecent(20)
+	}
+
+	ngOnDestroy() {
+		this.searchSubscribtion.unsubscribe()
+	}
 }

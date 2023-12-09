@@ -1,6 +1,9 @@
-<div class="list-page-container">
+<div class="list-page-container" *ngIf="!noResults">
 	<app-movie-card class="elem" [ngStyle]="!!elem?.shortDesc ? {} : {'min-height' : '300px'}"
 		[hasDescription]="!!elem?.shortDesc" *ngFor="let elem of videos" [elem]="elem">
 
 	</app-movie-card>
+</div>
+<div class="no-results-container" *ngIf="noResults">
+	<h1>Found no results for {{ searchString }}</h1>
 </div>

@@ -10,3 +10,10 @@
     padding-bottom: 15px;
     justify-items: center;
 }
+
+.no-results-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

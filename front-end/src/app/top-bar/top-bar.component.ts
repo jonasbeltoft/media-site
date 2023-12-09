@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ListPageComponent } from '../list-page/list-page.component';
 import { SearchService } from '../search.service';
 
 

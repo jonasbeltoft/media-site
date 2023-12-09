@@ -7,6 +7,7 @@ import { Observable, Subject, firstValueFrom, of, tap } from 'rxjs';
 export class SearchService {
 
 	@Output() searchEvent = new EventEmitter<{ id: string, title: string, episode?: string, series?: string, shortDesc: string, poster: string }[]>()
+	public lastSearched = ""
 
 	videos: { id: string, title: string, episode?: string, series?: string, shortDesc: string, poster: string }[] = []
 	premades: { id: string, title: string, episode?: string, series?: string, shortDesc: string, poster: string }[] = [
@@ -25,7 +26,7 @@ export class SearchService {
 
 	async search(input: string) {
 		console.log("Searched for: " + input);
-
+		this.lastSearched = input
 		// Do the fetch
 		let result = this.videos.filter(val => val.title.toLocaleLowerCase().includes(input.toLocaleLowerCase()) || val.series?.toLocaleLowerCase().includes(input.toLocaleLowerCase()))
 
@@ -35,9 +36,9 @@ export class SearchService {
 
 	async getRecent(count: number) {
 		// Do the fetch
+		this.lastSearched = "recently watched"
+
 		let result = this.videos.slice(0, count)
-		// Emit the result
-		console.log(result);
 
 		this.searchEvent.emit(result)
 	}
