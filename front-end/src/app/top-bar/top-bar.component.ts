@@ -22,7 +22,6 @@ export class TopBarComponent {
 		} else {
 			this.router.navigate(['/list'], { state: { searchString: val.value } })
 		}
-		val.value = ""
 	}
 
 	goToHome() {
