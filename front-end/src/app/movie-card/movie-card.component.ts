@@ -11,9 +11,9 @@ export class MovieCardComponent {
 	elem: any
 
 	@Input()
+	hasDescription: boolean
 
-
-		constructor(private router: Router) { }
+	constructor(private router: Router) { }
 
 	goToVideo(id: string) {
 		if (id) this.router.navigate(['video-viewer', id])

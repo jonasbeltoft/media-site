@@ -1,11 +1,10 @@
 .front-page-container {
-	height: 100%;
-	width: 100%;
+	height: calc(100% - 15px);
 	display: grid;
 	gap: 15px;
+	margin-right: 15px;
 	grid-template-columns: 85px 4fr 1fr;
-	grid-template-rows: 80px auto auto auto;
-	margin-bottom: 15px;
+	grid-template-rows: 80px 1fr 1fr 1fr;
 
 	color: #414141;
 }
@@ -45,70 +44,36 @@
 	object-fit: cover;
 	aspect-ratio: 16/9;
 	width: 100%;
+	height: 100%;
 	max-height: 100%;
 	border-radius: 7px;
 	box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
 }
 
-.prev-viewed-card {
+.prev-viewed-card-1 {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	cursor: pointer;
-
-	overflow: hidden;
-	border-radius: 7px;
-	background-color: white;
-	box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-
-.recently-watched-small-img {
-	object-fit: cover;
-	aspect-ratio: 16/9;
-	width: auto;
-	max-width: 100%;
-
-	background: url('/assets/icon-img.png') no-repeat;
-	background-size: contain;
-	background-position: center;
-}
-
-.title-small {
-	font-weight: 500;
-	font-size: 18px;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 3px;
-}
-
-.sub-small {
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-bottom: 3px;
-}
-
-.small-cards {
 	grid-column: 3 / 4;
-	grid-row: 2 / 5;
+	grid-row: 2 / 3;
 
+	max-height: min-content;
+
+}
+
+.prev-viewed-card-2 {
 	display: flex;
-	flex-direction: column;
-	padding-right: 15px;
-	padding-bottom: 15px;
+	grid-column: 3 / 4;
+	grid-row: 3 / 4;
+
 	max-height: 100%;
-	gap: 15px;
-	justify-content: space-between;
+}
+
+.prev-viewed-card-3 {
+	display: flex;
+	grid-column: 3 / 4;
+	grid-row: 4 / 5;
+
+	max-height: 100%;
 }
 
 @media only screen and (max-width: 550px) and (orientation: portrait) {

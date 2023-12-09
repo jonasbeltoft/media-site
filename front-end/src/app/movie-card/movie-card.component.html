@@ -1,4 +1,5 @@
-<mat-card (click)="goToVideo(elem?.id)">
+<mat-card (click)="goToVideo(elem?.id)"
+	[ngStyle]="!hasDescription ? {'min-height' : 'unset', 'max-width' : 'unset'} : null">
 	<mat-card-header>
 		<mat-card-title>{{ elem?.title }}</mat-card-title>
 		<mat-card-subtitle>{{ elem?.series ? elem?.series : 'Movie' }}</mat-card-subtitle>
@@ -9,7 +10,7 @@
 			<p class="top-left-text">{{ elem?.episode }}</p>
 		</div>
 	</div>
-	<mat-card-content>
+	<mat-card-content *ngIf="hasDescription">
 		<div>{{ elem?.shortDesc }}</div>
 	</mat-card-content>
 </mat-card>
